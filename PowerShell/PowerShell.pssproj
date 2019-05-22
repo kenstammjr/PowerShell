@@ -27,11 +27,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="ADFS\" />
+    <Folder Include="O365\" />
+    <Folder Include="SP2016\" />
     <Folder Include="SP2013\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Script.ps1" />
     <Compile Include="SP2013\Delete Missing Setup Files.ps1" />
+    <Compile Include="SP2013\Merge Logs.ps1" />
+    <Compile Include="SP2013\Reassociate Servive Application with Default Proxy Group.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
