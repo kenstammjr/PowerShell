@@ -36,7 +36,7 @@
     <Compile Include="SP2013\Delete Missing Setup Files.ps1" />
     <Compile Include="SP2013\Merge Logs.ps1" />
     <Compile Include="SP2013\Reassociate Servive Application with Default Proxy Group.ps1" />
-    <Compile Include="SP2013\Script1.ps1" />
+    <Compile Include="SP2013\Change Upgrade Status for Microsoft SharePoint Foundation Web Application.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
