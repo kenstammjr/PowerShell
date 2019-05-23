@@ -33,10 +33,16 @@
     <Folder Include="SP2013\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SP2013\Change Database Name for the Usage and Health Service Application.ps1" />
+    <Compile Include="SP2013\Change Suite Bar Text.ps1" />
+    <Compile Include="SP2013\Configure Root Certificate Trust.ps1" />
     <Compile Include="SP2013\Delete Missing Setup Files.ps1" />
+    <Compile Include="SP2013\Grant User Full Control to User Profile Service.ps1" />
     <Compile Include="SP2013\Merge Logs.ps1" />
     <Compile Include="SP2013\Reassociate Servive Application with Default Proxy Group.ps1" />
     <Compile Include="SP2013\Change Upgrade Status for Microsoft SharePoint Foundation Web Application.ps1" />
+    <Compile Include="SP2013\Clear Maintenance Mode.ps1" />
+    <Compile Include="SP2013\Change Owner Alias on All Site Collections.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
