@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Property>
+
+  <!-- SQL --> 	
+  <ServiceInstance>SP16_SERVICE_INSTANCE</ServiceInstance>
+  <ServiceListener>SP16_SERVICE_LISTENER</ServiceListener>
+  <SearchInstance>SP16_SEARCH_INSTANCE</SearchInstance>
+  <ContentInstance>SP16_CONTENT_INSTANCE</ContentInstance>
+  <ContentListener>SP16_CONTENT_LISTENER</ContentListener>
+
+  <!-- SQL Databases --> 	
+  <ConfigDB>SP16_ConfigDB</ConfigDB>
+  <AdminContentDB>SP16_Content_CentralAdmin</AdminContentDB>
+  <AppMgmtSvcDB>SP16_AppMgmtService</AppMgmtSvcDB>
+  <BdcSvcDB>SP16_BDC</BdcSvcDB>
+  <MmsSvcDB>SP16_MMS</MmsSvcDB>
+  <SecureStoreSvcDB>SP16_SecureStore</SecureStoreSvcDB>
+  <SessionStateSvcDB>SP16_SessionStateService</SessionStateSvcDB>
+  <StateSvcDB>SP16_StateService</StateSvcDB>
+  <SubscriptionSettingsSvcDB>SP16_SubscriptionSettings</SubscriptionSettingsSvcDB>
+  <UpsProfileDB>SP16_UPS_Profile</UpsProfileDB>
+  <UpsSyncDB>SP16_UPS_Sync</UpsSyncDB>
+  <UpsSocialDB>SP16_UPS_Social</UpsSocialDB>
+  <SearchSvcDB>SP16_SearchService</SearchSvcDB>
+  <UsageSvcDB>SP16_UsageAndHealthData</UsageSvcDB>
+  <SharedWebAppDatabaseName>SP16_Content_Shared_Main</SharedWebAppDatabaseName>
+  <SharedWebAppCatalogDatabaseName>SP16_Content_Shared_Catalog</SharedWebAppCatalogDatabaseName>
+  <OneDriveWebAppDatabaseName>SP16_Content_OneDrive_01</OneDriveWebAppDatabaseName>
+
+
+  <!-- Service Accounts -->
+  <FarmAccount>CONTOSO\sp16.farm.svc</FarmAccount>
+  <HighSvcAppAccount>CONTOSO\sp16.hsa.svc</HighSvcAppAccount>
+  <LowSvcAppAccount>CONTOSO\sp16.lsa.svc</LowSvcAppAccount>
+  <SharedWebAppPoolAccount>CONTOSO\sp16.content.svc</SharedWebAppPoolAccount>
+  <OneDriveWebAppPoolAccount>CONTOSO\sp16.onedrive.svc</OneDriveWebAppPoolAccount>
+  <SearchSvcAppAccount>CONTOSO\sp16.search.svc</SearchSvcAppAccount>
+  <SearchSvcCrawlAccount>CONTOSO\sp16.crawler.svc</SearchSvcCrawlAccount>
+
+  <!-- Passwords and Keys -->
+  <FarmPassword>{password}</FarmPassword>
+  <HighSvcAppAccountPassword>{password}</HighSvcAppAccountPassword>
+  <LowSvcAppAccountPassword>{password}</LowSvcAppAccountPassword>
+  <SharedWebAppPoolAccountPassword>{password}</SharedWebAppPoolAccountPassword>
+  <OneDriveWebAppPoolAccountPassword>{password}</OneDriveWebAppPoolAccountPassword>
+  <SearchSvcAppAccountPassword>{password}</SearchSvcAppAccountPassword>
+  <SearchSvcCrawlAccountPassword>{password}</SearchSvcCrawlAccountPassword> 
+  <SecureStoreMasterKeyPassword>{password}</SecureStoreMasterKeyPassword> 
+
+  <!-- Security Groups -->
+  <FarmAdministratorsWithShell>CONTOSO\SharePoint Farm Administrators</FarmAdministratorsWithShell>
+  <FarmAdministrators>CONTOSO\SharePoint Support Administrators</FarmAdministrators>
+  <ContentAdministrators>CONTOSO\SharePoint Content Administrators</ContentAdministrators>
+
+  <!-- Farm Settings -->
+  <FarmKey>{passkey}</FarmKey>
+  
+  <!-- Logs -->
+  <DiagnosticLogsLocation>L:\Diagnostics</DiagnosticLogsLocation>
+  <UsageLogsLocation>L:\Usage</UsageLogsLocation>
+
+  <!-- Accounts -->
+  <SuperUserAccount>i:0#.w|contoso\sp16.superuser.svc</SuperUserAccount>
+  <SuperReaderAccount>i:0#.w|contoso\sp16.superreader.svc</SuperReaderAccount>
+  <DefaultSiteOwner>CONTOSO\sp16.farm.svc</DefaultSiteOwner>
+
+  <!-- Application Pools -->
+  <HighSvcAppPool>HSAPool</HighSvcAppPool>
+  <LowSvcAppPool>LSAPool</LowSvcAppPool>
+  <SearchSvcAppPool>SSAPool</SearchSvcAppPool>
+
+  <!-- Service Applications -->
+  <AppMgmtSvcName>App Management Service</AppMgmtSvcName>
+  <BdcSvcName>Business Data Connectivity Service</BdcSvcName>
+  <MmsSvcName>Managed Metadata Service</MmsSvcName>
+  <SecureStoreSvcName>Secure Store Service</SecureStoreSvcName>
+  <StateSvcName>State Service</StateSvcName>
+  <SubscriptionSettingsSvcName>Subscription Settings Service</SubscriptionSettingsSvcName>
+  <UpsSvcName>User Profile Service</UpsSvcName>
+  <SearchSvcName>Search Service</SearchSvcName>
+  <SearchCrawlers>SP16_APPSVR_01,SP16_APPSVR_02</SearchCrawlers>
+  <SearchIndexers>SP16_SEARCHSVR_01,SP16_SEARCHSVR_02</SearchIndexers>
+  <SearchIndexLocation>I:\Index</SearchIndexLocation>
+  <UsageSvcName>"Usage and Health Data Service</UsageSvcName>
+  <WorkMgmtSvcName>"Work Management Service</WorkMgmtSvcName>
+
+  <!-- Web Applications -->
+  <VirtualDirectoryPath>D:\VirtualDirectories</VirtualDirectoryPath>
+  <BrandingText>CONTOSO</BrandingText>
+  <SharedWebAppName>shared.contoso.com</SharedWebAppName>
+  <SharedWebAppUrl>https://shared.consoso.com</SharedWebAppUrl>
+  <OneDriveWebAppName>onedrive.contoso.com</OneDriveWebAppName>
+  <OneDriveWebAppUrl>https://onedrive.contoso.com</OneDriveWebAppUrl>
+  <ProjectWebAppName>project.contoso.com</ProjectWebAppName>
+  <ProjectWebAppUrl>https://projects.contoso.com</ProjectWebAppUrl>
+
+  <!-- Site Collections -->
+  <AppCatalogUrl>https://catalog.contoso.com</AppCatalogUrl>
+  <AppCatalogName>App Catalog</AppCatalogName>
+  <AppCatalogDescription>App Catalog</AppCatalogDescription>
+  <SearchCenterUrl>https://search.contoso.com</SearchCenterUrl>
+  <SearchCenterName>Search Center</SearchCenterName>  
+  <SearchCenterDescription>Search Center</SearchCenterDescription>
+  <ContentTypeHubUrl>https://contoso.com/sites/cth</ContentTypeHubUrl>
+  <ContentTypeHubName>Content Type Hub</ContentTypeHubName>  
+  <ContentTypeHubDescription>Content Type Hub</ContentTypeHubDescription>
+
+</Property>
+
+

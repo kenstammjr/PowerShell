@@ -28,11 +28,46 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="ADFS\" />
-    <Folder Include="O365\" />
     <Folder Include="SP2016\" />
+    <Folder Include="O365\" />
     <Folder Include="SP2013\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SP2016\Add IIS Role.ps1" />
+    <Compile Include="SP2016\Add Managed Accounts.ps1" />
+    <Compile Include="SP2016\Change Database Name for the Usage and Health Service Application.ps1" />
+    <Compile Include="SP2016\Check if port is open.ps1" />
+    <Compile Include="SP2016\Configure Suite Bar Text.ps1" />
+    <Compile Include="SP2016\Configure Super Accounts.ps1" />
+    <Compile Include="SP2016\Connect Server to Farm - Application.ps1" />
+    <Compile Include="SP2016\Connect Server to Farm - Search.ps1" />
+    <Compile Include="SP2016\Connect Server to Farm - WFE.ps1" />
+    <Compile Include="SP2016\Create Configuration Database.ps1" />
+    <Compile Include="SP2016\Create OOS Farm.ps1" />
+    <Compile Include="SP2016\Create Quota Templates.ps1" />
+    <Compile Include="SP2016\Create Service Application - App Management Service.ps1" />
+    <Compile Include="SP2016\Create Service Application - BDC.ps1" />
+    <Compile Include="SP2016\Create Service Application - MMS.ps1" />
+    <Compile Include="SP2016\Create Service Application - Search.ps1" />
+    <Compile Include="SP2016\Create Service Application - Secure Store.ps1" />
+    <Compile Include="SP2016\Create Service Application - SharePoint ASP NET Session State Service.ps1" />
+    <Compile Include="SP2016\Create Service Application - State Service.ps1" />
+    <Compile Include="SP2016\Create Service Application - Subscription Settings Service.ps1" />
+    <Compile Include="SP2016\Create Service Application - UPS.ps1" />
+    <Compile Include="SP2016\Create Service Application - Usage and Health Data Service.ps1" />
+    <Compile Include="SP2016\Create Service Application - Work Management Service.ps1" />
+    <Compile Include="SP2016\Create Service Application Pools.ps1" />
+    <Compile Include="SP2016\Create SPSite - shared.ps1" />
+    <Compile Include="SP2016\Create SPWebApplication - OneDrive.ps1" />
+    <Compile Include="SP2016\Create SPWebApplication - Shared.ps1" />
+    <Compile Include="SP2016\Create User OneDrive Site.ps1" />
+    <Compile Include="SP2016\Display Properties.ps1" />
+    <Compile Include="SP2016\Enable HTTP Strict Transport Security.ps1" />
+    <Compile Include="SP2016\Get Service Account Password Last Change Date.ps1" />
+    <Compile Include="SP2016\Set Diagnostic Log Location.ps1" />
+    <Compile Include="SP2016\Set Script Folder.ps1" />
+    <Compile Include="SP2016\Test LDAP Connection.ps1" />
+    <Compile Include="SP2016\URL Rewrite.ps1" />
     <Compile Include="SP2013\Change Database Name for the Usage and Health Service Application.ps1" />
     <Compile Include="SP2013\Change Suite Bar Text.ps1" />
     <Compile Include="SP2013\Configure Root Certificate Trust.ps1" />
@@ -43,6 +78,9 @@
     <Compile Include="SP2013\Change Upgrade Status for Microsoft SharePoint Foundation Web Application.ps1" />
     <Compile Include="SP2013\Clear Maintenance Mode.ps1" />
     <Compile Include="SP2013\Change Owner Alias on All Site Collections.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SP2016\Properties.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
