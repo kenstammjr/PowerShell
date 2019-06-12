@@ -64,6 +64,7 @@
     <Compile Include="SP2016\Display Properties.ps1" />
     <Compile Include="SP2016\Enable HTTP Strict Transport Security.ps1" />
     <Compile Include="SP2016\Get Service Account Password Last Change Date.ps1" />
+    <Compile Include="SP2016\Reassociate Service Application with Default Proxy Group.ps1" />
     <Compile Include="SP2016\Set Diagnostic Log Location.ps1" />
     <Compile Include="SP2016\Set Script Folder.ps1" />
     <Compile Include="SP2016\Test LDAP Connection.ps1" />
@@ -74,7 +75,7 @@
     <Compile Include="SP2013\Delete Missing Setup Files.ps1" />
     <Compile Include="SP2013\Grant User Full Control to User Profile Service.ps1" />
     <Compile Include="SP2013\Merge Logs.ps1" />
-    <Compile Include="SP2013\Reassociate Servive Application with Default Proxy Group.ps1" />
+    <Compile Include="SP2013\Reassociate Service Application with Default Proxy Group.ps1" />
     <Compile Include="SP2013\Change Upgrade Status for Microsoft SharePoint Foundation Web Application.ps1" />
     <Compile Include="SP2013\Clear Maintenance Mode.ps1" />
     <Compile Include="SP2013\Change Owner Alias on All Site Collections.ps1" />
