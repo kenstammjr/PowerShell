@@ -65,6 +65,7 @@
     <Compile Include="SP2016\Enable HTTP Strict Transport Security.ps1" />
     <Compile Include="SP2016\Get Service Account Password Last Change Date.ps1" />
     <Compile Include="SP2016\Reassociate Service Application with Default Proxy Group.ps1" />
+    <Compile Include="SP2016\Change Central Admin URL and Port.ps1" />
     <Compile Include="SP2016\Set Diagnostic Log Location.ps1" />
     <Compile Include="SP2016\Set Script Folder.ps1" />
     <Compile Include="SP2016\Test LDAP Connection.ps1" />
