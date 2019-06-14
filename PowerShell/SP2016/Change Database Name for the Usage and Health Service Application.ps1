@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -18,5 +17,3 @@ foreach($xmlObject in $xmlObjects){
 }
 
 Get-SPUsageApplication | Set-SPUsageApplication -DatabaseServer $serviceInstance -DatabaseName $serviceDbName
-
-#### UNCLASSIFIED ####

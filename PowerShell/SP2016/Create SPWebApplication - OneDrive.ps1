@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -46,6 +45,3 @@ New-SPWebApplication `
     -AuthenticationProvider $authProvider `
     -HostHeader $webAppName `
     -SecureSocketsLayer
-
-
-#### UNCLASSIFIED ####

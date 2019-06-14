@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -50,4 +49,8 @@ Add-WindowsFeature NET-WCF-HTTP-Activation45
 # To get OWA version
 # (Invoke-WebRequest http://oos.contoso.com/m/met/participant.svc/jsonannonymous/broadcastping).Headers["X-OfficeVersion"]
 
-#### UNCLASSIFIED ####
+$Farm = Get-SPFarm
+$Farm.Properties.Add("WopiLegacySoapSupport", "<URL>/x/_vti_bin/ExcelServiceInternal.asmx");
+$Farm.Update(); 
+
+Add-WindowsFeature Web-Server,Web-Mgmt-Tools,Web-Mgmt-Console,Web-WebServer,Web-Common-Http,Web-Default-Doc,Web-Static-Content,Web-Performance,Web-Stat-Compression,Web-Dyn-Compression,Web-Security,Web-Filtering,Web-Windows-Auth,Web-App-Dev,Web-Net-Ext45,Web-Asp-Net45,Web-ISAPI-Ext,Web-ISAPI-Filter,Web-Includes,NET-Framework-Features,NET-Framework-45-Features,NET-Framework-Core,NET-Framework-45-Core,NET-HTTP-Activation,NET-Non-HTTP-Activ,NET-WCF-HTTP-Activation45,Windows-Identity-Foundation,Server-Media-Foundation

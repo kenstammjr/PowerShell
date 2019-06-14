@@ -1,3 +1,4 @@
+
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
 $user = "CONTOSO\john.doe"

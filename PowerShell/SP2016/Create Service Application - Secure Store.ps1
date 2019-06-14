@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -25,6 +24,4 @@ $serviceProxy = "$serviceName Proxy"
 
 $secureStoreApp      = New-SPSecureStoreServiceApplication -ApplicationPool $appPool -DatabaseServer $serviceDbServer -DatabaseName $serviceDbName -Name $serviceName -AuditingEnabled:$false
 $secureStoreAppProxy = New-SPSecureStoreServiceApplicationProxy -Name $serviceProxy -ServiceApplication $secureStoreApp -DefaultProxyGroup
-# Update-SPSecureStoreMasterKey -ServiceApplicationProxy $secureStoreAppProxy -PassPhrase (ConvertTo-SecureString $passPhrase -AsPlainText -Force) `
-
-#### UNCLASSIFIED ####
+# Update-SPSecureStoreMasterKey -ServiceApplicationProxy $secureStoreAppProxy -PassPhrase (ConvertTo-SecureString $passPhrase -AsPlainText -Force) 

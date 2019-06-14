@@ -1,5 +1,3 @@
-#### UNCLASSIFIED ####
-
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -23,4 +21,3 @@ foreach($xmlObject in $xmlObjects){
 New-SPServiceApplicationPool -Name $highSvcAppPool -Account $highSvcAppPoolAcct
 New-SPServiceApplicationPool -Name $lowSvcAppPool -Account  $lowSvcAppPoolAcct
 
-#### UNCLASSIFIED #### 

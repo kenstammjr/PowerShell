@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -36,4 +35,3 @@ $upsSvc = New-SPProfileServiceApplication -ApplicationPool $appPool `
 
 New-SPProfileserviceApplicationProxy -ServiceApplication $upsSvc -Name $serviceProxy –DefaultProxyGroup
 
-#### UNCLASSIFIED ####

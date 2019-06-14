@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -58,5 +57,3 @@ New-SPManagedAccount $account
 $password = ConvertTo-SecureString $oneDriveWebAppPoolAccountPassword -AsPlainText -Force
 $account = New-Object system.management.automation.pscredential $oneDriveWebAppPoolAccount $password
 New-SPManagedAccount $account
-
-#### UNCLASSIFIED #### 

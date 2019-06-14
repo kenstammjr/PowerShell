@@ -1,25 +1,15 @@
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
-CLS
-
-if ($scriptFolder -eq $null){
-		Write-Host "The script folder variable is null.  Run the [Set Script Folder.ps1} file first!"
-		break
-}
-[xml]$file = Get-Content "$($scriptFolder)Properties.xml"
-
-$xmlObjects = $file.SelectNodes("/Property")
-
 foreach($xmlObject in $xmlObjects){
-    $searchAppName =  $xmlObject.SearchSvcName
-    $dbName =  $xmlObject.SearchSvcDB
-    $dbServer =  $xmlObject.SearchInstance
-    $indexLocation = $xmlObject.SearchIndexLocation
-    $searchAppPoolName =  $xmlObject.SearchSvcAppPool
-    $searchAppPoolAccount =  $xmlObject.SearchSvcAppAccount
-    $searchCrawlers =  $xmlObject.SearchCrawlers
-    $searchIndexers =  $xmlObject.SearchIndexers
+    $searchAppName =  "Search Service"
+    $dbName =  "SP13_SearchService"
+    $dbServer =  "SQLSvrInstanceName"
+    $indexLocation = "I:\Index"
+    $searchAppPoolName =  "SSAPool"
+    $searchAppPoolAccount =  "CONTOSO\sp16.search.svc"
+    $searchCrawlers =  "SP13_APPSVR_01","SP13_APPSVR_02"
+    $searchIndexers =  "SP13_SEARCHSVR_01","SP13_SEARCHSVR_02"
     $lsaPool = $xmlObject.LowSvcAppPool
 }
 
@@ -38,6 +28,34 @@ $SearchProxy = "$searchAppName Proxy"
 # Create Search Application Pool
 New-SPServiceApplicationPool -Name $searchAppPoolName -Account $searchAppPoolAccount -ErrorAction SilentlyContinue
 $appPool = Get-SPServiceApplicationPool -Identity $searchAppPoolName
+
+# Start the Search Service Instances on each of the Search Servers
+foreach($serverName in $crawlers){
+    Start-SPEnterpriseSearchServiceInstance -Identity $serverName
+    Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $serverName
+}
+foreach($serverName in $indexers){
+    Start-SPEnterpriseSearchServiceInstance -Identity $serverName
+    Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity $serverName
+}
+
+# Wait for Services to Provision
+while(Get-SPEnterpriseSearchServiceInstance | ?{$_.status -eq "Provisioning"}){
+    Start-Sleep 2
+}
+
+# Confirm that Everything Provisioned Correctly
+foreach($serverName in $crawlers){
+    if(!((Get-SPEnterpriseSearchServiceInstance -Identity $serverName).status -eq "Online")){
+        throw("The Search Instance on $serverName failed to Provision. Run Get-SPEnterpriseSearchServiceInstance to View the Status of all Search Service Instances")
+    }
+}
+# Confirm that Everything Provisioned Correctly
+foreach($serverName in $indexers){
+    if(!((Get-SPEnterpriseSearchServiceInstance -Identity $serverName).status -eq "Online")){
+        throw("The Search Instance on $serverName failed to Provision. Run Get-SPEnterpriseSearchServiceInstance to View the Status of all Search Service Instances")
+    }
+}
 
 # Create Search Service Application and Application Proxy
 New-SPEnterpriseSearchServiceApplication -Name $searchAppName -ApplicationPool $searchAppPoolName -DatabaseName $dbName -DatabaseServer $dbServer -AdminApplicationPool $adminAppPool

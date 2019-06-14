@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -25,4 +24,3 @@ New-SPStateServiceDatabase -Name $serviceDbName -DatabaseServer $serviceDbServer
 $stateSvcApp = New-SPStateServiceApplication -Name $serviceName -Database $serviceDbName  
 New-SPStateServiceApplicationProxy -Name $serviceProxy -ServiceApplication $stateSvcApp -DefaultProxyGroup
 
-#### UNCLASSIFIED ####

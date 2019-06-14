@@ -1,3 +1,4 @@
+
 Add-PSSnapin Microsoft.SharePoint.PowerShell
 
 $webappsvc = Get-SPServiceInstance -server $env:COMPUTERNAME | ? { $_.TypeName -eq "Microsoft SharePoint Foundation Web Application" }

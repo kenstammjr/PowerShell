@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -91,6 +90,3 @@ $newQuotaTemplate.UserCodeWarningLevel = 300
 $contentService =[Microsoft.SharePoint.Administration.SPWebService]::ContentService
 $contentService.QuotaTemplates.Add($newQuotaTemplate)
 $contentService.Update()
-
-
-#### UNCLASSIFIED ####

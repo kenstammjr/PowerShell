@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -22,4 +21,3 @@ $serviceProxy = "$serviceName Proxy"
 $svcApp = New-SPWorkManagementServiceApplication -Name $serviceName -ApplicationPool $appPool 
 New-SPWorkManagementServiceApplicationProxy -Name $serviceProxy -ServiceApplication $svcApp
 
-#### UNCLASSIFIED ####

@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -23,4 +22,3 @@ $serviceProxy = "$serviceName Proxy"
 
 $bdc = New-SPBusinessDataCatalogServiceApplication –ApplicationPool $appPool –DatabaseName $serviceDbName –DatabaseServer $serviceDbServer –Name $serviceName 
 
-#### UNCLASSIFIED ####

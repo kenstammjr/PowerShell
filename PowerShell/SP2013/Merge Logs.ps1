@@ -1,3 +1,4 @@
+
 Add-PSSnapin microsoft.sharepoint.powershell
 
 Merge-SPLogFile -Path "D:\Logs\FarmMergedLog.log" -Overwrite

@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -24,4 +23,3 @@ $serviceProxy = "$serviceName Proxy"
 $appMgmtApp = New-SPAppManagementServiceApplication -ApplicationPool $appPool -DatabaseServer $serviceInstance -DatabaseName $serviceDbName -Name $serviceName 
 New-SPAppManagementServiceApplicationProxy -Name $serviceProxy -ServiceApplication $appMgmtApp -UseDefaultProxyGroup $true
 
-#### UNCLASSIFIED ####

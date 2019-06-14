@@ -1,22 +1,13 @@
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
-CLS
-
-if ($scriptFolder -eq $null){
-		Write-Host "The script folder variable is null.  Run the [Set Script Folder.ps1} file first!"
-		break
-}
-[xml]$file = Get-Content "$($scriptFolder)Properties.xml"
-
-$xmlObjects = $file.SelectNodes("/Property")
-
-foreach($xmlObject in $xmlObjects){
-    $superUser =  $xmlObject.SuperUserAccount
-    $superReader =  $xmlObject.SuperReaderAccount
-}
-
 $wa = Get-SPWebApplication
+# If using custom claims
+#	$superUser = "i:05.t|samlprovider|superUser@contoso.com" # email address on super user account "sp-superUser-svc"
+#	$superReader = "i:05.t|samlprovider|superReader@contoso.com" # email address on super reader account "sp-superReader-svc"
+# else if using windows claims
+	$superUser = "i:0#.w|CONTOSO\sp13.superuser.svc"
+	$superReader = "i:0#.w|CONTOSO\sp13.superreader.svcsvc"
 
 foreach($a in $wa){
     $a.Properties["portalsuperuseraccount"] = $superUser

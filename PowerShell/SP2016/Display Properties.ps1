@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 CLS
 
@@ -10,5 +9,3 @@ if ($scriptFolder -eq $null){
 
 $xmlObjects = $file.SelectNodes("/Property")
 $xmlObjects
-
-#### UNCLASSIFIED ####

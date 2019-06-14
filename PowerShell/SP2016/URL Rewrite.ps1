@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Set-SPSite (Get-SPSite 'http://contoso.com') -URL 'https://contoso.com' 
 
@@ -11,5 +10,4 @@ $site.GetUrls()
 $site.RemoveUrl($uri)
 $site.ContentDatabase
 
-#### UNCLASSIFIED ####
 

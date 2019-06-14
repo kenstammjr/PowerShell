@@ -33,6 +33,17 @@
     <Folder Include="SP2013\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SP2013\Add IIS Role.ps1" />
+    <Compile Include="SP2013\Add Managed Accounts.ps1" />
+    <Compile Include="SP2013\Change the Distributed Cache Service Account.ps1" />
+    <Compile Include="SP2013\Change the Memory Allocation of Distributed Cache.ps1" />
+    <Compile Include="SP2013\Clear Remote BLOB Storage Settings.ps1" />
+    <Compile Include="SP2013\Configure Super Accounts.ps1" />
+    <Compile Include="SP2013\Create Configuration Database.ps1" />
+    <Compile Include="SP2013\Create Service Application - App Management Service.ps1" />
+    <Compile Include="SP2013\Create Service Application - BDC.ps1" />
+    <Compile Include="SP2013\Create Service Application - MMS.ps1" />
+    <Compile Include="SP2013\Create Service Application - Search.ps1" />
     <Compile Include="SP2016\Add IIS Role.ps1" />
     <Compile Include="SP2016\Add Managed Accounts.ps1" />
     <Compile Include="SP2016\Change Database Name for the Usage and Health Service Application.ps1" />
@@ -57,7 +68,7 @@
     <Compile Include="SP2016\Create Service Application - Usage and Health Data Service.ps1" />
     <Compile Include="SP2016\Create Service Application - Work Management Service.ps1" />
     <Compile Include="SP2016\Create Service Application Pools.ps1" />
-    <Compile Include="SP2016\Create SPSite - shared.ps1" />
+    <Compile Include="SP2016\Create SPSite - Shared.ps1" />
     <Compile Include="SP2016\Create SPWebApplication - OneDrive.ps1" />
     <Compile Include="SP2016\Create SPWebApplication - Shared.ps1" />
     <Compile Include="SP2016\Create User OneDrive Site.ps1" />

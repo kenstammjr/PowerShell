@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -22,4 +21,3 @@ New-SPUsageApplication –Name $serviceName -DatabaseName $serviceDbName -Database
 $serviceProxy = Get-SPServiceApplicationProxy | where {$_.TypeName -like “*Usage and Health*”}
 $serviceProxy.Provision()
 
-#### UNCLASSIFIED ####

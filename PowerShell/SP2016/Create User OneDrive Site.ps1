@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin microsoft.sharepoint.powershell
 
@@ -9,4 +8,3 @@ $user = $userProfileConfigManager.GetUserProfile("CONTOSO\joe.user")
 $user.PersonalSiteInstantiationState
 $user.CreatePersonalSite()
 
-#### UNCLASSIFIED ####

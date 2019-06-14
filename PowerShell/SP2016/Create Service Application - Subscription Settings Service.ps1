@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -24,4 +23,3 @@ New-SPSubscriptionSettingsServiceApplicationProxy –ServiceApplication $subSettin
 
 Get-SPServiceInstance | where {$_.TypeName –eq “Microsoft SharePoint Foundation Subscription Settings Service”} | Start-SPServiceInstance
 
-#### UNCLASSIFIED ####

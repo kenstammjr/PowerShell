@@ -1,25 +1,11 @@
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
-
-CLS
-
-if ($scriptFolder -eq $null){
-		Write-Host "The script folder variable is null.  Run the [Set Script Folder.ps1} file first!"
-		break
-}
-[xml]$file = Get-Content "$($scriptFolder)Properties.xml"
-
-$xmlObjects = $file.SelectNodes("/Property")
-
-foreach($xmlObject in $xmlObjects){
-    $serviceName =  $xmlObject.MmsSvcName
-    $serviceDbName =  $xmlObject.MmsSvcDB
-    $serviceInstance =  $xmlObject.ServiceListener
-    $appPool =  $xmlObject.LowSvcAppPool
-}
-
+$appPool = "LSAPool"
+$serviceName = "Managed Metadata Service"
+$serviceDbServer = “SQLSvrInstanceName"
 $serviceProxy = "$serviceName Proxy"
+$serviceDbName = "SP13_MMS"
 
 New-SPMetadataServiceApplication -Name $serviceName `
     -DatabaseServer $serviceDbServer `
@@ -33,5 +19,4 @@ New-SPMetadataServiceApplicationProxy -Name $serviceProxy `
 Set-SPMetadataServiceApplicationProxy -Identity $serviceProxy `
     -DefaultSiteCollectionTaxonomy:$true `
     -DefaultKeywordTaxonomy:$true `
-    -ContentTypePushdownEnabled:$true 
-
+    -ContentTypePushdownEnabled:$true

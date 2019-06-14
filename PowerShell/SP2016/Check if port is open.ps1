@@ -1,5 +1,4 @@
-﻿#### UNCLASSIFIED ####
-
+﻿
 $computerName = "SP16_SEARCHSVR_01", "SP16_SEARCHSVR_02"
 [int[]]$ports = 443
 
@@ -18,5 +17,3 @@ foreach ($computer in $computerName){
         $socket.Dispose()
     }
 }
-
-#### UNCLASSIFIED ####

@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.Powershell
 
@@ -21,5 +20,3 @@ Connect-SPConfigurationDatabase -DatabaseName $configDB `
 				-DatabaseServer $serviceInstance `
 				-Passphrase (ConvertTo-SecureString $farmKey -AsPlainText -Force) `
 				-LocalServerRole Application
-
-#### UNCLASSIFIED ####

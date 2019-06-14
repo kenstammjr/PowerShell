@@ -1,3 +1,4 @@
+
 Add-PSSnapin microsoft.sharepoint.powershell
 
 # Configure the SharePoint root certificate as a trusted certificate on every server in the SharePoint farm.  

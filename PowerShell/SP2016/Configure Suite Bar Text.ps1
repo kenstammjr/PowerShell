@@ -1,4 +1,3 @@
-#### UNCLASSIFIED ####
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue
 
@@ -20,5 +19,3 @@ foreach($xmlObject in $xmlObjects){
 $webapp = Get-SPWebApplication $sharedWebAppName
 $webapp.SuiteNavBrandingText = $brandingText
 $webapp.Update()
-
-#### UNCLASSIFIED ####
